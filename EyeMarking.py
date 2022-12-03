@@ -12,9 +12,9 @@ logging.basicConfig(level=logging.INFO)
 LOGGER = logging.getLogger('eye_scanner')
 
 EYE_CASCADE = cv2.CascadeClassifier(
-    '/Users/maximilianandre/Software/IdeaProjects/FaceAlignment/venv/lib/python3.7/site-packages/cv2/data/haarcascade_eye.xml')
+    'haarcascade_eye.xml')
 FACE_CASCADE = cv2.CascadeClassifier(
-    '/Users/maximilianandre/Software/IdeaProjects/FaceAlignment/venv/lib/python3.7/site-packages/cv2/data/haarcascade_frontalface_default.xml')
+    'haarcascade_frontalface_default.xml')
 
 
 def detect_eyes(img):
