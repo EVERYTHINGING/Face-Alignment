@@ -184,7 +184,7 @@ def transform_image(img):
 
     dst = eye_translation(img, eye_list, x_scaling_factor, y_scaling_factor)
     height, width, ch = dst.shape
-    dst = dst[100:height - 350, 100:width - 300]
+    dst = dst[100:height, 100:width]
 
     return dst
 
