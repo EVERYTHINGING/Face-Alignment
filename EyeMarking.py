@@ -178,6 +178,9 @@ def transform_image(img):
 
     radian_of_rotation = angle_of_points(eye_list[0], eye_list[1])
     degree_of_rotation = radian_of_rotation * 180 / np.pi
+    
+    if abs(degree_of_rotation) > 2.0:
+      raise TooMuchEyesException(f"Rotation too much, not acceptable.")
 
     LOGGER.info(f"Will rotate image to {degree_of_rotation} degrees")
     img = rotate_image(img, degree_of_rotation)
