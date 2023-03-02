@@ -15,7 +15,7 @@ LOGGER = logging.getLogger('image_transformer')
 
 def get_all_jpeg_files(path_to_images):
     all_jpeg = []
-    for file in glob.glob(os.path.join(f"{path_to_images}", "*.png")):
+    for file in glob.glob(os.path.join(f"{path_to_images}", "*.jpeg")):
         all_jpeg.append(file)
 
     all_jpeg.sort()
